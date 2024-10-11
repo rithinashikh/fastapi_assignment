@@ -1,4 +1,3 @@
-# app/routers/clock_in.py
 from fastapi import APIRouter
 from app.models import ClockInModel
 from app.crud import (

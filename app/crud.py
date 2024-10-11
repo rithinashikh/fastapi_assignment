@@ -1,9 +1,9 @@
-# app/crud.py
+
 from bson import ObjectId
 from app.database import items_collection, clock_in_collection
 from app.models import ItemModel, ClockInModel
 
-# Helper functions for items collection
+
 async def create_item(item: ItemModel):
     new_item = await items_collection.insert_one(item.dict())
     return str(new_item.inserted_id)
@@ -36,7 +36,7 @@ async def delete_item_by_id(id: str):
     result = await items_collection.delete_one({"_id": ObjectId(id)})
     return result.deleted_count
 
-# Helper functions for clock_in collection
+
 async def create_clock_in(clock_in: ClockInModel):
     new_clock_in = await clock_in_collection.insert_one(clock_in.dict())
     return str(new_clock_in.inserted_id)

@@ -1,4 +1,4 @@
-# app/database.py
+
 from motor.motor_asyncio import AsyncIOMotorClient
 from app.config import MONGO_DETAILS
 

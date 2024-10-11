@@ -1,4 +1,3 @@
-# app/routers/items.py
 from fastapi import APIRouter
 from app.models import ItemModel
 from app.crud import (
