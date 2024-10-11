@@ -6,7 +6,6 @@ class ItemModel(BaseModel):
     name: str
     email: str
     item_name: str
-    description: Optional[str] = None
     quantity: int
     expiry_date: Optional[datetime]
     insert_date: Optional[datetime] = Field(default_factory=datetime.utcnow)
