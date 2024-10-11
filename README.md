@@ -62,8 +62,8 @@ Request Body:
 json
 
     {
-    "name": "John Doe",
-    "email": "john@example.com",
+    "name": "Manu",
+    "email": "manu@example.com",
     "item_name": "Laptop",
     "quantity": 5,
     "expiry_date": "2024-12-31"
@@ -97,7 +97,7 @@ Request Body:
 json
 
     {
-    "email": "john@example.com",
+    "email": "manu@example.com",
     "location": "New York"
     }
 
@@ -129,7 +129,7 @@ http://127.0.0.1:8000/docs
 ## Hosted Application
 The application is hosted on a free platform:
 
-Swagger Documentation: 
+- Swagger Documentation: https://chronic-korry-rithins-f22c9d8c.koyeb.app/docs
 
 
 ### Technologies Used
