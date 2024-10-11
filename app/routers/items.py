@@ -16,7 +16,9 @@ async def get_item_by_id_endpoint(id: str):
     return await get_item_by_id(id)
 
 @router.get("/filter")
-async def filter_items_endpoint(email: str = None, expiry_date: str = None, insert_date: str = None, quantity: int = None):
+async def filter_items_endpoint(
+    email: str = None, expiry_date: str = None, insert_date: str = None, quantity: int = None
+):
     return await filter_items(email, expiry_date, insert_date, quantity)
 
 @router.get("/aggregate")

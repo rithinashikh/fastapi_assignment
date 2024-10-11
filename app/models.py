@@ -1,19 +1,17 @@
-
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional
 from datetime import datetime
 
 class ItemModel(BaseModel):
     name: str
-    description: Optional[str]
-    price: float
+    email: str
+    item_name: str
+    description: Optional[str] = None
     quantity: int
     expiry_date: Optional[datetime]
-    insert_date: Optional[datetime]
-    email: Optional[str]
+    insert_date: Optional[datetime] = Field(default_factory=datetime.utcnow)
 
 class ClockInModel(BaseModel):
-    employee_id: str
-    location: Optional[str]
-    insert_datetime: datetime
-    email: Optional[str]
+    email: str
+    location: Optional[str] = None
+    insert_datetime: Optional[datetime] = Field(default_factory=datetime.utcnow)
